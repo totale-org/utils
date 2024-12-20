@@ -21,7 +21,6 @@
     "build": "tsc",
     "check:exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
     "check:format": "prettier --check .",
-    "ci": "npm run check:format && npm run build && npm run check:exports",
     "dev": "vitest",
     "format": "prettier --write .",
     "test": "vitest run"

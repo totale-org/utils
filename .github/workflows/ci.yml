@@ -22,8 +22,17 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm install
 
-      - name: Run CI
-        run: npm run ci
+      - name: Check Formatting
+        run: npm run check:format
+
+      - name: Build
+        run: npm run build
+
+      - name: Check Exports
+        run: npm run check:exports
+
+      - name: Test
+        run: npm run test
