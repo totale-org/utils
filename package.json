@@ -2,8 +2,6 @@
   "name": "@totale/utils",
   "version": "0.0.1",
   "description": "Totale Utils",
-  "author": "Yash Totale",
-  "license": "MIT",
   "homepage": "https://github.com/totale-org/utils#readme",
   "bugs": {
     "url": "https://github.com/totale-org/utils/issues"
@@ -12,17 +10,26 @@
     "type": "git",
     "url": "git+https://github.com/totale-org/utils.git"
   },
+  "license": "MIT",
+  "author": "Yash Totale",
   "type": "module",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsc",
+    "check:exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "check:format": "prettier --check .",
+    "ci": "npm run check:format && npm run build && npm run check:exports",
+    "dev": "vitest",
     "format": "prettier --write .",
-    "ci": "npm run build"
+    "test": "vitest run"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.2",
     "prettier": "^3.4.2",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
   }
 }
