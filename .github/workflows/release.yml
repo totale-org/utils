@@ -1,7 +1,6 @@
-name: CI
+name: Release
 
 on:
-  pull_request:
   push:
     branches:
       - main
@@ -11,9 +10,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  ci:
+  release:
+    name: Release
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
@@ -26,14 +25,12 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Check Formatting
-        run: npm run check:format
-
-      - name: Build
-        run: npm run build
-
-      - name: Check Exports
-        run: npm run check:exports
-
-      - name: Test
-        run: npm run test
+      - name: Publish
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          version: npm run release:version
+          publish: npm run release:publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
