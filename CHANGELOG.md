@@ -1,5 +1,11 @@
 # @totale/utils
 
+## 0.0.4
+
+### Patch Changes
+
+- 324b485: Testing Release Action (again)
+
 ## 0.0.3
 
 ### Patch Changes
