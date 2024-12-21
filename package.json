@@ -24,8 +24,7 @@
     "dev": "vitest",
     "format": "prettier --write .",
     "prepublishOnly": "npm run check:format && npm run build && npm run check:exports && npm run test",
-    "release": "npm run release:version && npm run release:publish",
-    "release:publish": "changeset publish",
+    "release:publish": "npm run build && npm run check:exports && changeset publish",
     "release:version": "changeset version",
     "test": "vitest run"
   },
