@@ -1,1 +1,1 @@
-export { add } from './utils.js';
+export * as Arrays from './arrays.js';
