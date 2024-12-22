@@ -1,5 +1,11 @@
 # @totale/utils
 
+## 0.0.5
+
+### Patch Changes
+
+- 12259d6: Add Array Utils
+
 ## 0.0.4
 
 ### Patch Changes
