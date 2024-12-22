@@ -18,7 +18,6 @@
     /* Transpiling with TypeScript: */
     "module": "NodeNext",
     "outDir": "dist",
-    "rootDir": "src",
     "sourceMap": true,
 
     /* Building for a library: */
@@ -26,5 +25,6 @@
 
     /* Other Options: */
     "lib": ["es2022"]
-  }
+  },
+  "include": ["src"]
 }

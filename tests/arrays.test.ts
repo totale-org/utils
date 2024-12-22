@@ -1,5 +1,5 @@
 import { test, expect, describe } from 'vitest';
-import { Arrays } from './index.js';
+import { Arrays } from '../src/index.js';
 
 describe('Basics', () => {
   describe('isEmpty', () => {
