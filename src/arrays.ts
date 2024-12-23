@@ -2,7 +2,7 @@
 //           Basics           //
 ////////////////////////////////
 /**
- * Checks if the given array is empty.
+ * Checks if an array is empty.
  *
  * @param arr - The array to check.
  * @returns `true` if the array is empty, `false` otherwise.
@@ -13,6 +13,24 @@ export const isEmpty = <T>(arr: T[]): arr is [] => arr.length === 0;
 //           Index            //
 ////////////////////////////////
 /**
+ * Returns the first index of an array (`-1` if the array is empty).
+ *
+ * @param arr - The array to check.
+ * @returns The first index (`0`) if the array is not empty, otherwise `-1`.
+ */
+export const firstIndex = <T>(arr: T[]): number => (isEmpty(arr) ? -1 : 0);
+
+/**
+ * Checks if an index is the first index of an array (`false` if the array is empty).
+ *
+ * @param arr - The array to check.
+ * @param index - The index to check.
+ * @returns `true` if the index is the first index of the array, otherwise `false`.
+ */
+export const isFirstIndex = <T>(arr: T[], index: number): boolean =>
+  isEmpty(arr) ? false : index === firstIndex(arr);
+
+/**
  * Returns the last index of an array (`-1` if the array is empty).
  *
  * @param arr - The array to get the last index from.
@@ -21,7 +39,7 @@ export const isEmpty = <T>(arr: T[]): arr is [] => arr.length === 0;
 export const lastIndex = <T>(arr: T[]): number => arr.length - 1;
 
 /**
- * Checks if the given index is the last index of the array (`false` if the array is empty).
+ * Checks if an index is the last index of an array (`false` if the array is empty).
  *
  * @param arr - The array to check.
  * @param index - The index to check.
@@ -52,7 +70,7 @@ export const lastItem = <T>(arr: T[]): T | null =>
   isEmpty(arr) ? null : arr[lastIndex(arr)]!;
 
 /**
- * Returns the nth item from the array (`null` if the index is out of bounds).
+ * Returns the nth item from an array (`null` if the index is out of bounds).
  *
  * @param arr - The array from which to retrieve the item.
  * @param n - The index of the item to retrieve.

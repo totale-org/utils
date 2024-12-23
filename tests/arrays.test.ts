@@ -14,6 +14,30 @@ describe('Basics', () => {
 });
 
 describe('Index', () => {
+  describe('firstIndex', () => {
+    test('returns -1 for an empty array', () => {
+      expect(Arrays.firstIndex([])).toBe(-1);
+    });
+
+    test('returns 0 for a non-empty array', () => {
+      expect(Arrays.firstIndex([1, 2, 3])).toBe(0);
+    });
+  });
+
+  describe('isFirstIndex', () => {
+    test('returns false for an empty array', () => {
+      expect(Arrays.isFirstIndex([], 0)).toBe(false);
+    });
+
+    test('returns true if the index is the first index', () => {
+      expect(Arrays.isFirstIndex([1, 2, 3], 0)).toBe(true);
+    });
+
+    test('returns false if the index is not the first index', () => {
+      expect(Arrays.isFirstIndex([1, 2, 3], 1)).toBe(false);
+    });
+  });
+
   describe('lastIndex', () => {
     test('returns -1 for an empty array', () => {
       expect(Arrays.lastIndex([])).toBe(-1);
