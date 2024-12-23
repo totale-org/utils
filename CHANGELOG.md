@@ -1,5 +1,11 @@
 # @totale/utils
 
+## 0.0.6
+
+### Patch Changes
+
+- ba8ef40: Add Set, String, Nullish Utils
+
 ## 0.0.5
 
 ### Patch Changes
