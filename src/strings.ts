@@ -8,7 +8,7 @@
  * @returns `true` if the value is a string, otherwise `false`.
  */
 export const isString = (value: unknown): value is string =>
-  typeof value === 'string';
+  typeof value === "string";
 
 /**
  * Checks if a string is empty.
