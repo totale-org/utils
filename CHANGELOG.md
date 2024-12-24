@@ -1,5 +1,11 @@
 # @totale/utils
 
+## 0.0.7
+
+### Patch Changes
+
+- aa85193: Add RecursiveArray Type
+
 ## 0.0.6
 
 ### Patch Changes
