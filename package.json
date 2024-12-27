@@ -21,13 +21,13 @@
     "build": "rimraf dist && tsc",
     "check:exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
     "check:format": "prettier --check . && markdownlint .",
-    "dev": "vitest",
+    "dev": "vitest --passWithNoTests",
     "format": "prettier --write . && markdownlint --fix .",
     "prepare": "husky",
     "prepublishOnly": "npm run check:format && npm run build && npm run check:exports && npm run test",
     "release:publish": "changeset publish",
     "release:version": "changeset version",
-    "test": "tsc --project tests && vitest run"
+    "test": "tsc --project tests && vitest run --passWithNoTests"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.2",
