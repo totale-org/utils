@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { Sets } from "../src";
+import { Sets } from "../src/index.js";
 
 describe("Sets.isSet", () => {
   it("should return true for Sets", () => {

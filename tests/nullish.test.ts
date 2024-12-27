@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { Nullish } from "../src";
+import { Nullish } from "../src/index.js";
 
 describe("Basics", () => {
   describe("isUndefined", () => {

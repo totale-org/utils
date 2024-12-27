@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { Strings } from "../src";
+import { Strings } from "../src/index.js";
 
 describe("Basics", () => {
   describe("isString", () => {

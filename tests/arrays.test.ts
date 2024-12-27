@@ -1,19 +1,15 @@
 import { test, expect, describe } from "vitest";
 import { Arrays } from "../src/index.js";
 
-describe("Types", () => {
-  describe("RecursiveArray", () => {
-    test("is an array of arrays", () => {
-      const arr: Arrays.RecursiveArray<number> = [[1], [2], [3]];
-      expect(arr).toEqual([[1], [2], [3]]);
-    });
+////////////////////////////////
+//        Type Checks         //
+////////////////////////////////
+const typeChecker = <T>(_: T) => null;
 
-    test("is an array of arrays of arrays", () => {
-      const arr: Arrays.RecursiveArray<number> = [[[1]], [[2]], [[3]]];
-      expect(arr).toEqual([[[1]], [[2]], [[3]]]);
-    });
-  });
-});
+// RecursiveArray
+typeChecker<Arrays.RecursiveArray<number>>([1, [2, [3, 4], 5], 6]);
+// @ts-expect-error
+typeChecker<Arrays.RecursiveArray<number>>([1, [2, [3, 4], "5"], 6]);
 
 describe("Basics", () => {
   describe("isEmpty", () => {

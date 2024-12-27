@@ -1,6 +1,11 @@
 ////////////////////////////////
 //           Types            //
 ////////////////////////////////
+/**
+ * Represents an array that can recursively contain elements of type `T` or other arrays of the same type.
+ *
+ * @template T - The type of elements contained in the array.
+ */
 export type RecursiveArray<T> = Array<RecursiveArray<T> | T>;
 
 ////////////////////////////////
