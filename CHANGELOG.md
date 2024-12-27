@@ -1,5 +1,11 @@
 # @totale/utils
 
+## 0.0.8
+
+### Patch Changes
+
+- 73c96b7: Add Record Utils
+
 ## 0.0.7
 
 ### Patch Changes
